@@ -6,6 +6,7 @@ import postcss from "gulp-postcss";
 import sass from "gulp-sass";
 import autoprefixer from "autoprefixer";
 import cssNano from "gulp-cssnano";
+import plumber from "gulp-plumber";
 import BrowserSync from "browser-sync";
 import webpack from "webpack";
 import webpackConfig from "./webpack.conf";
@@ -27,6 +28,10 @@ gulp.task("build-preview", ["css", "js"], (cb) => buildSite(cb, hugoArgsPreview,
 // Compile CSS with PostCSS
 gulp.task("css", () => (
   gulp.src("./src/scss/*.scss")
+    .pipe(plumber((error) => {
+      gutil.log(gutil.colors.red(error.message));
+      browserSync.notify("Failed: Sass Error");
+    }))
     .pipe(sass({
       outputStyle: "nested",
       percision: 10
