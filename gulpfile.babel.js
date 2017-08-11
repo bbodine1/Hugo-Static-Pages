@@ -28,14 +28,14 @@ gulp.task("build-preview", ["css", "js"], (cb) => buildSite(cb, hugoArgsPreview,
 
 // Compile CSS with PostCSS
 gulp.task("css", () => (
-  gulp.src("./src/css/*.scss")
+  gulp.src("./src/scss/*.scss")
     .pipe(sass({
       outputStyle: "nested",
       percision: 10
     }))
     .pipe(postcss([autoprefixer()]))
     .pipe(cssNano())
-    .pipe(gulp.dest("./dist/css"))
+    .pipe(gulp.dest("./dist"))
     .pipe(browserSync.stream())
 ));
 
@@ -62,7 +62,7 @@ gulp.task("server", ["hugo", "css", "js"], () => {
     }
   });
   gulp.watch("./src/js/**/*.js", ["js"]);
-  gulp.watch("./src/css/**/*.scss", ["css"]);
+  gulp.watch("./src/scss/**/*.scss", ["css"]);
   gulp.watch("./site/**/*", ["hugo"]);
 });
 

@@ -1,13 +1,11 @@
-# Victor Hugo
+# Hugo Starter
 
 **A [Hugo](https://gohugo.io/) boilerplate for creating truly epic websites**
 
 This is a boilerplate for using Hugo as a static site generator and Gulp + Webpack as your
 asset pipeline.
 
-It's setup to use post-css and babel for CSS and JavaScript.
-
-This project is released under the [MIT license](LICENSE). Please make sure you understand its implications and guarantees.
+It uses Sass, Autoprefixer, Browser-sync, and Babel.
 
 ## Usage
 
@@ -38,10 +36,12 @@ npm run build
 |  |--layouts          // This is where all templates go
 |  |  |--partials      // This is where includes live
 |  |  |--index.html    // The index page
-|  |--static           // Files in here ends up in the public folder
+|  |--static           // Files in here ends up in dist/
+|  |  |--img           // Image files go here
 |--src                 // Files that will pass through the asset pipeline
-|  |--css              // CSS files in the root of this folder will end up in /css/...
-|  |--js               // app.js will be compiled to /app.js with babel
+|  |--scss             // styles.scss will compile to dist/styles.css with sass
+|  |--js               // app.js will be compiled to dist/app.js with babel
+|  |  |--custom        // Write your custom js in this folder
 ```
 
 ## Basic Concepts
@@ -64,7 +64,7 @@ The `src/js/app.js` file is the entrypoint for webpack and will be built to `/di
 
 You can use ES6 and use both relative imports or import libraries from npm.
 
-Any CSS file directly under the `src/css/` folder will get compiled with [PostCSS Next](http://cssnext.io/)
+Any SCSS file directly under the `src/scss/` folder will get compiled with Sass and PostCSS
 to `/dist/css/{filename}.css`. Import statements will be resolved as part of the build
 
 ## Environment variables
