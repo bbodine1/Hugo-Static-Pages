@@ -3,8 +3,6 @@ import {spawn} from "child_process";
 import hugoBin from "hugo-bin";
 import gutil from "gulp-util";
 import postcss from "gulp-postcss";
-import cssImport from "postcss-import";
-import cssnext from "postcss-cssnext";
 import sass from "gulp-sass";
 import autoprefixer from "autoprefixer";
 import cssNano from "gulp-cssnano";
