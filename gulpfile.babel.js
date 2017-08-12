@@ -4,6 +4,7 @@ import hugoBin from "hugo-bin";
 import gutil from "gulp-util";
 import postcss from "gulp-postcss";
 import sass from "gulp-sass";
+import sourcemaps from "gulp-sourcemaps";
 import autoprefixer from "autoprefixer";
 import cssNano from "gulp-cssnano";
 import plumber from "gulp-plumber";
@@ -32,12 +33,14 @@ gulp.task("css", () => (
       gutil.log(gutil.colors.red(error.message));
       browserSync.notify("Failed: Sass Error");
     }))
+    .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: "nested",
       percision: 10
     }))
     .pipe(postcss([autoprefixer()]))
     .pipe(cssNano())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest("./dist"))
     .pipe(browserSync.stream())
 ));
