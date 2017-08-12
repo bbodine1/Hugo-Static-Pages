@@ -27,7 +27,7 @@ gulp.task("build-preview", ["css", "js"], (cb) => buildSite(cb, hugoArgsPreview,
 
 // Compile CSS with PostCSS
 gulp.task("css", () => (
-  gulp.src("./src/scss/*.scss")
+  gulp.src("./src/scss/styles.scss")
     .pipe(plumber((error) => {
       gutil.log(gutil.colors.red(error.message));
       browserSync.notify("Failed: Sass Error");

@@ -1,0 +1,39 @@
+// _global.scss 			~/styles/
+// Styles here will be included throughout the project. Limit use as much
+// as possible. Using too much here can cause un intended effects.
+////////////////////////////////////////////////////////////
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+
+// Set global box sizing
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -ms-overflow-style: none;
+  overflow: auto;
+  background-color: $html-bg-color;
+}
+
+
+hr {
+  height: rem-calc(1);
+  width: 100%;
+  border: 0;
+  margin: 0;
+}

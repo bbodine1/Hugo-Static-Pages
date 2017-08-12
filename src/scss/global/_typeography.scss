@@ -1,0 +1,167 @@
+// _typeography.scss 			./styles/partials/
+////////////////////////////////////////////////////////////
+
+
+
+// Headings
+////////////////////////////////////////////////////////////
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $black;
+}
+
+h1 {
+  font-size: rem-calc(36);
+  line-height: rem-calc(39);
+  letter-spacing: rem-calc(-1.1);
+}
+
+h2 {
+  font-size: rem-calc(32);
+  line-height: rem-calc(39);
+  letter-spacing: rem-calc(-1);
+}
+
+h3 {
+  font-size: rem-calc(28);
+  line-height: rem-calc(25);
+  letter-spacing: rem-calc(-.9);
+}
+
+h4 {
+  font-size: rem-calc(25);
+  line-height: rem-calc(27);
+  letter-spacing: rem-calc(-.8);
+}
+
+h5 {
+  font-size: rem-calc(21);
+  line-height: rem-calc(23);
+  letter-spacing: rem-calc(-.6);
+}
+
+h6 {
+  font-size: rem-calc(18);
+  line-height: rem-calc(20);
+  letter-spacing: rem-calc(-.5);
+}
+
+// Display class
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  &.display {
+    font-family: $interstate-bold;
+    text-transform: uppercase;
+  }
+}
+
+
+// Paragraphs
+////////////////////////////////////////////////////////////
+body,
+p {
+  font-family: $interstate;
+  font-size: rem-calc(15);
+  line-height: rem-calc(24);
+  letter-spacing: rem-calc(-.3);
+  color: $blk-60;
+}
+
+.small {
+  font-size: rem-calc(13);
+  line-height: rem-calc(21);
+  letter-spacing: rem-calc(-.2);
+}
+
+.meta {
+  font-size: rem-calc(12);
+  line-height: rem-calc(19);
+  letter-spacing: rem-calc(-.1);
+}
+
+
+// Links
+////////////////////////////////////////////////////////////
+a {
+  text-decoration: none;
+  color: $clr-links-alt;
+  transition: $link-transition;
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+  &.inactive {
+    color: $blk-20;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      cursor: default;
+    }
+  }
+}
+
+
+// Dark Styles
+////////////////////////////////////////////////////////////
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  .dark & {
+    color: $white;
+  }
+}
+
+p {
+  .dark & {
+    color: $wht-60;
+  }
+}
+
+a:not(.button) {
+  .dark & {
+    color: $clr-links;
+    &.inactive {
+      color: $wht-20;
+    }
+  }
+}
+
+
+// Light Styles
+////////////////////////////////////////////////////////////
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  .light & {
+    color: $black;
+  }
+}
+
+p {
+  .light & {
+    color: $blk-60;
+  }
+}
+
+a:not(.button) {
+  .light & {
+    color: $clr-links-alt;
+    &.inactive {
+      color: $blk-20;
+    }
+  }
+}

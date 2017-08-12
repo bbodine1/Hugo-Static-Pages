@@ -1,0 +1,27 @@
+// config.scss      ~/styles/
+// This file is only for variables that will be used globally. Do not
+// include any scss other than variables here.
+/////////////////////////////////////////////////////////////////////
+
+// Lightspeed Sass-Helpers
+@import "config-mqs";
+@import "functions/_mqs";
+@import "functions/_rem-calc";
+
+// Colors
+@import "./config-colors";
+
+// Font Variables
+@import "./config-fonts";
+
+// Mixins
+@import "./mixins/all";
+
+
+/////////////////////////////////////////////////////////////////////
+// Page Setup Variables
+/////////////////////////////////////////////////////////////////////
+
+$link-transition: all 175ms ease-in-out;
+$page-max-width: rem-calc(1440);
+$html-bg-color: $astral;

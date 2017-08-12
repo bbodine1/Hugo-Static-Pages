@@ -1,0 +1,61 @@
+// config-colors.scss 			~/styles/
+////////////////////////////////////////////////////////////
+
+
+
+$black        :#000000;
+$niagara      :#09ad7e;
+$woodsmoke    :#0c0d0d;
+$aztec        :#171a1c;
+$smoke        :#252727;
+$astral       :#2b7cad;
+$ash          :#bdc0c1;
+$rolling-stone:#8e9aa3;
+$quill-blue   :#c6cdd2;
+$bunker       :#2d3439;
+$arsenic      :#444e55;
+$fiord        :#5b6770;
+$regent       :#828f99;
+$oslo         :#898e90;
+$submarine    :#8e9aa3;
+$gray         :#a9a9a9;
+$taupe        :#b2af9a;
+$crimson      :#dc143c;
+$khaki        :#deddd3;
+$army-gold    :#ffd530;
+$white        :#ffffff;
+
+// Black-Tints
+$blk-90        :rgba($black, .9);
+$blk-80        :rgba($black, .8);
+$blk-70        :rgba($black, .7);
+$blk-60        :rgba($black, .6);
+$blk-50        :rgba($black, .5);
+$blk-40        :rgba($black, .4);
+$blk-30        :rgba($black, .3);
+$blk-20        :rgba($black, .2);
+$blk-15        :rgba($black, .15);
+$blk-10        :rgba($black, .1);
+$blk-5         :rgba($black, .05);
+$blk-2         :rgba($black, .02);
+
+
+// White-Tints
+$wht-90        :rgba($white, .9);
+$wht-80        :rgba($white, .8);
+$wht-70        :rgba($white, .7);
+$wht-60        :rgba($white, .6);
+$wht-50        :rgba($white, .5);
+$wht-40        :rgba($white, .4);
+$wht-30        :rgba($white, .3);
+$wht-20        :rgba($white, .2);
+$wht-15        :rgba($white, .15);
+$wht-10        :rgba($white, .1);
+$wht-5         :rgba($white, .05);
+$wht-2         :rgba($white, .02);
+
+
+// Message Colors
+$clr-error     :$crimson;
+$clr-links     :$army-gold;
+$clr-links-alt :$astral;

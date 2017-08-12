@@ -1,0 +1,36 @@
+// _buttons.scss 			./styles/mixins/
+////////////////////////////////////////////////////////////
+
+
+
+// CTA (Call to Action) button
+// USEAGE: @include cta-button;
+@mixin cta-button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  font-size: rem-calc(14);
+  font-family: $industry;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: rem-calc(2) solid $khaki;
+  border-radius: rem-calc(2);
+  min-width: rem-calc(214);
+  padding: rem-calc(22);
+  transition: $link-transition;
+  @media #{$medium-up} {
+    display: flex;
+  }
+  &:hover {
+    background-color: $khaki;
+    color: $arsenic;
+  }
+  &:active,
+  &:focus {
+    background-color: $khaki;
+    color: $arsenic;
+    opacity: .8;
+  }
+}
