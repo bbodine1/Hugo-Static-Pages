@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Hugo with Gulp and Webpack</title>
+    <title>{{ .Site.Title }}</title>
     <link rel="stylesheet" href="/styles.css"/>
   </head>
-  <body>
+  <body class="{{ .Params.pageClass }}">

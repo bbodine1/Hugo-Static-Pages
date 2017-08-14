@@ -1,3 +1,10 @@
 baseurl = "/"
-languageCode = "en-us"
+
 title = "My New Hugo Site"
+
+[taxonomies]
+  author = "authors"
+  quote = "quotes"
+
+[params]
+  asitevariable = "This is a site variable from the config.toml"
