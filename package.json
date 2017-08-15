@@ -7,7 +7,7 @@
     "hugo": "gulp hugo",
     "build": "gulp build",
     "build-preview": "gulp build-preview",
-    "prestart": "rm -rf dist/",
+    "prestart": "rm -rf dist/ && yarn",
     "start": "gulp server",
     "lint": "eslint src",
     "test": "hugo version"

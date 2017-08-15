@@ -1,11 +1,13 @@
-# Hugo Starter
+# Hugo Starter (No Blog)
 
-**A [Hugo](https://gohugo.io/) boilerplate for creating truly epic websites**
+**A [Hugo](https://gohugo.io/) boilerplate for quickly deploying single or multiple page websites without a blog**
 
 This is a boilerplate for using Hugo as a static site generator and Gulp + Webpack as your
 asset pipeline.
 
 It uses Sass, Autoprefixer, Browser-sync, and Babel.
+
+The default functionality to create a blog using Hugo has been removed to be as simple as possible to deploy a single or multiple page website.
 
 ## Usage
 
@@ -14,7 +16,6 @@ Be sure that you have the latest node and npm installed.
 Next, clone this repository and run:
 
 ```bash
-npm install
 npm start
 ```
 
@@ -31,7 +32,9 @@ npm run build
 
 ```
 |--site                // Everything in here will be built with hugo
-|  |--content          // Pages and collections - ask if you need extra pages
+|  |--archetypes       // Default frontmatter for created pages
+|  |  |--default.md    // Default frontmatter for created pages
+|  |--content          // Pages go here
 |  |--data             // YAML data files with any data for use in examples
 |  |--layouts          // This is where all templates go
 |  |  |--partials      // This is where includes live
@@ -64,8 +67,18 @@ The `src/js/app.js` file is the entrypoint for webpack and will be built to `/di
 
 You can use ES6 and use both relative imports or import libraries from npm.
 
-Any SCSS file directly under the `src/scss/` folder will get compiled with Sass and PostCSS
-to `/dist/css/{filename}.css`. Import statements will be resolved as part of the build
+All SCSS file are imported through `styles.scss` and will get compiled with Sass and PostCSS
+to `/dist/styles.css`.
+
+## Creating New Pages
+
+To create a new page run the following command
+
+```bash
+hugo new nameofyourpage.md
+```
+
+This will create a new document inside the content folder named `nameofyourpage.md`. It will use the layout template `layouts/page/page-one.html` to generate the page. You will be able to navigate to `/nameofyourpage/` to view the new page in the browser.
 
 ## Environment variables
 
