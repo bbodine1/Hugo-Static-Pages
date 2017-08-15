@@ -2956,9 +2956,9 @@ https-browserify@0.0.1:
   version "0.0.1"
   resolved "https://registry.npmjs.org/https-browserify/-/https-browserify-0.0.1.tgz#3f91365cabe60b77ed0ebba24b454e3e09d95a82"
 
-hugo-bin@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.npmjs.org/hugo-bin/-/hugo-bin-0.12.0.tgz#52ee42359a1200f47a55ed20d2abbbaef8b6318f"
+"hugo-bin@https://github.com/bbodine1/hugo-bin/tarball/master":
+  version "0.13.0"
+  resolved "https://github.com/bbodine1/hugo-bin/tarball/master#e8217eba594520126b8fe83ce2698691bc0e7c6c"
   dependencies:
     bin-wrapper "3.0.2"
     del-cli "0.2.1"

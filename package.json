@@ -36,7 +36,7 @@
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-util": "^3.0.7",
-    "hugo-bin": "^0.12.0",
+    "hugo-bin": "https://github.com/bbodine1/hugo-bin/tarball/master",
     "imports-loader": "^0.7.1",
     "url-loader": "^0.5.7",
     "webpack": "^3",
