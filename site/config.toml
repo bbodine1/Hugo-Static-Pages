@@ -1,3 +1,9 @@
 baseurl = "/"
-languageCode = "en-us"
+
 title = "My New Hugo Site"
+
+disableKinds = ["taxonomy","taxonomyTerm"]
+
+[params]
+  asitevariable = "This is a site variable from the config.toml"
+
