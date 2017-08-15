@@ -72,7 +72,7 @@ to `/dist/styles.css`.
 
 ## Creating New Pages
 
-To create a new page run the following command
+To create a new page, cd to the `site/` directory and run the following command
 
 ```bash
 hugo new nameofyourpage.md
